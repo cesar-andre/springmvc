@@ -5,18 +5,9 @@
 <head>
 <title>Livros de Java, Android, iPhone, Ruby, PHP e muito mais -
 	Casa do Código</title>
-	<c:url value="/resources/css" var="cssPath" />
-	<link rel="stylesheet" href="${cssPath }/bootstrap.min.css">
 </head>
 <body>
 
-<nav class="nav">
-  <a class="nav-link active" href="${s:mvcUrl('PC#listar').build()}">Lista de Produtos</a>
-  <a class="nav-link" href="${s:mvcUrl('PC#form').build()}">Cadastro de Produtos</a>
-</nav>
-
-<div class="container">
-<br />
 <h1>Lista de Produtos</h1><br />
 
 	<div>
@@ -26,11 +17,11 @@
 		${falha}
 	</div>
 
-	<table class="table table-bordered table-striped table-hover">
+	<table>
 		<tr>
-			<th>Titulo</th>
-			<th>Descrição</th>
-			<th>Páginas</th>
+			<td>Titulo</td>
+			<td>Descrição</td>
+			<td>Páginas</td>
 		</tr>
 		<c:forEach items="${produtos}" var="produto">
 			<tr>
@@ -40,11 +31,6 @@
 			</tr>
 		</c:forEach>
 	</table>
-
-
-
-
-</div>
 
 
 </body>
